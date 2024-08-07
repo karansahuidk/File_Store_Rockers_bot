@@ -46,13 +46,11 @@ TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 #start message
 import os
 
-START_MSG = os.environ.get("START_MESSAGE", """<b>🫵 𝐇𝐞𝐥𝐥𝐨 {username} 𝐈 𝐚𝐦 𝐅𝐢𝐥𝐞 𝐒𝐭𝐨𝐫 𝐁𝐨𝐭 ⏳
+START_MSG = os.environ.get("START_MESSAGE", """<b><a href="t.me/+D7L-rX9lKA43MGRl">🍿 𝐎𝐓𝐓 𝐌𝐨𝐯𝐢𝐞 🍿</a><a href="t.me/+MkmB-unfQk02YTU1">🎞 𝐀𝐋𝐋 𝐌𝐎𝐕𝐈𝐄 🎞</a>
 
-<a href="t.me/+D7L-rX9lKA43MGRl">🍿 𝐎𝐓𝐓 𝐌𝐨𝐯𝐢𝐞 🍿</a><a href="t.me/+MkmB-unfQk02YTU1">🎞 𝐀𝐋𝐋 𝐌𝐎𝐕𝐈𝐄 🎞</a>
+                   <a href="t.me/+y4Yfxe221o5iZjQ9">🔞 𝐚𝐝𝐮𝐥𝐭 𝐯𝐢𝐝𝐞𝐨 🔞</a>
 
-            <a href="t.me/+y4Yfxe221o5iZjQ9">🔞 adult video 🔞</a>
-
-⚠️ THIS BOT IS MADE BY @ROCKERSBACKUP ©️</b>""")
+⚠️ MADE BY @ROCKERSBACKUP ©️</b>""")
 try:
     ADMINS=[]
     for x in (os.environ.get("ADMINS", "6331847574").split()):
@@ -61,10 +59,10 @@ except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
 
 #Force sub message 
-FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hello {first}\n\n<b>You need to join in my Channel/Group to use me\n\nKindly Please join Channel</b>")
+FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "<b>You need to join in my Channel/Group and subscribe my youtube channel to use me\n\nSubscribe :- https://youtube.com/@jnentertainment.?si=GRyKp5kUhDtP3Ssu</b>")
 
 #set your Custom Caption here, Keep None for Disable Custom Caption
-CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "{previouscaption}")
+CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "{filename}\n\n<a href="t.me/+y4Yfxe221o5iZjQ9">🔞 𝐚𝐝𝐮𝐥𝐭 𝐯𝐢𝐝𝐞𝐨 🔞</a>\n\n<a href="t.me/+D7L-rX9lKA43MGRl">🍿 𝐎𝐓𝐓 𝐌𝐨𝐯𝐢𝐞 🍿</a>\n\n<a href="t.me/+MkmB-unfQk02YTU1">🎞 𝐀𝐋𝐋 𝐌𝐎𝐕𝐈𝐄 🎞</a>")
 
 #set True if you want to prevent users from forwarding files from bot
 PROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', "False") == "True" else False
@@ -73,7 +71,7 @@ PROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', "False") == "True" e
 DISABLE_CHANNEL_BUTTON = os.environ.get("DISABLE_CHANNEL_BUTTON", None) == 'True'
 
 BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
-USER_REPLY_TEXT = "❌Don't send me messages directly I'm only File Share bot!"
+USER_REPLY_TEXT = "⚠️ Aske UR Movies Here :- https://t.me/Rockers_ott_movie_link_bot"
 
 ADMINS.append(OWNER_ID)
 ADMINS.append(6331847574)
