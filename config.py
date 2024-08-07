@@ -44,7 +44,7 @@ FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1001910410959"))
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 #start message
-START_MSG = os.environ.get("START_MESSAGE", "🫵 𝐇𝐞𝐥𝐥𝐨 {username} 𝐈 𝐚𝐦 𝐑𝐨𝐜𝐤𝐞𝐫𝐬 𝐅𝐢𝐥𝐞 𝐒𝐭𝐨𝐫 𝐁𝐨𝐭 ⏳\n\n🍿 𝐎𝐓𝐓 𝐌𝐨𝐯𝐢𝐞 :- t.me/+D7L-rX9lKA43MGRl\n\n🎞 𝐀𝐋𝐋 𝐌𝐎𝐕𝐈𝐄 :- t.me/+MkmB-unfQk02YTU1\n\n🔞 adult video :- t.me/+y4Yfxe221o5iZjQ9\n\n⚠️ THIS BOT IS MADE BY @ROCKERSBACKUP ©️\n\n[ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ](https://t.me/vj_botz)")
+START_MSG = os.environ.get("START_MESSAGE", "🫵 𝐇𝐞𝐥𝐥𝐨 {username} 𝐈 𝐚𝐦 𝐑𝐨𝐜𝐤𝐞𝐫𝐬 𝐅𝐢𝐥𝐞 𝐒𝐭𝐨𝐫 𝐁𝐨𝐭 ⏳\n\n🍿 𝐎𝐓𝐓 𝐌𝐨𝐯𝐢𝐞 :- t.me/+D7L-rX9lKA43MGRl\n\n🎞 𝐀𝐋𝐋 𝐌𝐎𝐕𝐈𝐄 :- t.me/+MkmB-unfQk02YTU1\n\n🔞 adult video :- t.me/+y4Yfxe221o5iZjQ9\n\n⚠️ THIS BOT IS MADE BY @ROCKERSBACKUP ©️\n\n<a href="https://www.example.com">Example Link</a>")
 try:
     ADMINS=[]
     for x in (os.environ.get("ADMINS", "6331847574").split()):
