@@ -35,7 +35,7 @@ SHORTLINK_URL = os.environ.get("SHORTLINK_URL", "Mdisk.pro")
 SHORTLINK_API = os.environ.get("SHORTLINK_API", "766185149277536bd3b9bbf1ccc75cb97a411729")
 VERIFY_EXPIRE = int(os.environ.get('VERIFY_EXPIRE', 86400)) # Add time in seconds
 IS_VERIFY = os.environ.get("IS_VERIFY", "True")
-TUT_VID = os.environ.get("TUT_VID","gojfsi/2")
+TUT_VID = os.environ.get("TUT_VID","https://t.me/How_to_open_link_rockersbot/19")
 
 
 #force sub channel id, if you want enable force sub
@@ -44,7 +44,7 @@ FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1001910410959"))
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 #start message
-START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link.")
+START_MSG = os.environ.get("START_MESSAGE", "🫵 𝐇𝐞𝐥𝐥𝐨 {username} 𝐈 𝐚𝐦 𝐑𝐨𝐜𝐤𝐞𝐫𝐬 𝐅𝐢𝐥𝐞 𝐒𝐭𝐨𝐫 𝐁𝐨𝐭 ⏳\n\n🍿 𝐎𝐓𝐓 𝐌𝐨𝐯𝐢𝐞 :- t.me/+D7L-rX9lKA43MGRl\n\n🎞 𝐀𝐋𝐋 𝐌𝐎𝐕𝐈𝐄 :- t.me/+MkmB-unfQk02YTU1\n\n🔞 adult video :- t.me/+y4Yfxe221o5iZjQ9\n\n⚠️ THIS BOT IS MADE BY @ROCKERSBACKUP ©️\n\n[ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ](https://t.me/vj_botz)")
 try:
     ADMINS=[]
     for x in (os.environ.get("ADMINS", "6331847574").split()):
