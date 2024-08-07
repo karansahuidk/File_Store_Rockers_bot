@@ -46,17 +46,13 @@ TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 #start message
 import os
 
-START_MSG = os.environ.get("START_MESSAGE", """🫵 𝐇𝐞𝐥𝐥𝐨 {username} 𝐈 𝐚𝐦 𝐑𝐨𝐜𝐤𝐞𝐫𝐬 𝐅𝐢𝐥𝐞 𝐒𝐭𝐨𝐫 𝐁𝐨𝐭 ⏳
+START_MSG = os.environ.get("START_MESSAGE", """<b>🫵 𝐇𝐞𝐥𝐥𝐨 {username} 𝐈 𝐚𝐦 𝐅𝐢𝐥𝐞 𝐒𝐭𝐨𝐫 𝐁𝐨𝐭 ⏳
 
-🍿 𝐎𝐓𝐓 𝐌𝐨𝐯𝐢𝐞 :- t.me/+D7L-rX9lKA43MGRl
+<a href="t.me/+D7L-rX9lKA43MGRl">🍿 𝐎𝐓𝐓 𝐌𝐨𝐯𝐢𝐞 🍿</a><a href="t.me/+MkmB-unfQk02YTU1">🎞 𝐀𝐋𝐋 𝐌𝐎𝐕𝐈𝐄 🎞</a>
 
-🎞 𝐀𝐋𝐋 𝐌𝐎𝐕𝐈𝐄 :- t.me/+MkmB-unfQk02YTU1
+            <a href="t.me/+y4Yfxe221o5iZjQ9">🔞 adult video 🔞</a>
 
-🔞 adult video :- t.me/+y4Yfxe221o5iZjQ9
-
-⚠️ THIS BOT IS MADE BY @ROCKERSBACKUP ©️
-
-<a href="https://www.example.com">Example Link</a>""")
+⚠️ THIS BOT IS MADE BY @ROCKERSBACKUP ©️</b>""")
 try:
     ADMINS=[]
     for x in (os.environ.get("ADMINS", "6331847574").split()):
