@@ -62,7 +62,7 @@ except ValueError:
 FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "<b>You need to join in my Channel/Group and subscribe my youtube channel to use me\n\nSubscribe :- https://youtube.com/@jnentertainment.?si=GRyKp5kUhDtP3Ssu</b>")
 
 #set your Custom Caption here, Keep None for Disable Custom Caption
-CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "{filename}\n\n<a href="t.me/+y4Yfxe221o5iZjQ9">🔞 𝐚𝐝𝐮𝐥𝐭 𝐯𝐢𝐝𝐞𝐨 🔞</a>\n\n<a href="t.me/+D7L-rX9lKA43MGRl">🍿 𝐎𝐓𝐓 𝐌𝐨𝐯𝐢𝐞 🍿</a>\n\n<a href="t.me/+MkmB-unfQk02YTU1">🎞 𝐀𝐋𝐋 𝐌𝐎𝐕𝐈𝐄 🎞</a>")
+CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", """{filename}\n\n<a href="t.me/+y4Yfxe221o5iZjQ9">🔞 𝐚𝐝𝐮𝐥𝐭 𝐯𝐢𝐝𝐞𝐨 🔞</a>\n\n<a href="t.me/+D7L-rX9lKA43MGRl">🍿 𝐎𝐓𝐓 𝐌𝐨𝐯𝐢𝐞 🍿</a>\n\n<a href="t.me/+MkmB-unfQk02YTU1">🎞 𝐀𝐋𝐋 𝐌𝐎𝐕𝐈𝐄 🎞</a>""")
 
 #set True if you want to prevent users from forwarding files from bot
 PROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', "False") == "True" else False
