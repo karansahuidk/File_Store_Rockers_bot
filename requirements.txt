@@ -1,5 +1,5 @@
 # --- For-Bot-Working --------- #
-pip install --upgrade pyrogram
+pyrogram==2.0.106  # Ensure you specify the correct version
 TgCrypto
 pyromod
 # --- For-Database ------------ #
