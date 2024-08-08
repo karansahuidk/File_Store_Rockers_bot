@@ -1,6 +1,6 @@
 pyrogram==2.0.106
 TgCrypto==1.2.3
-pyromod==0.7.1
+pyromod==3.1.6
 pymongo==4.5.0
 motor==3.2.0
 umongo==3.0.0
