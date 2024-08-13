@@ -12,3 +12,5 @@ beautifulsoup4==4.12.3
 shortzy==0.0.8
 aiohttp==3.10.1
 aiofiles==24.1.0
+BeautifulSoup
+requests
