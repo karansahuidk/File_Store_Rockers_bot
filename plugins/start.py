@@ -13,6 +13,9 @@ from pyrogram.enums import ParseMode
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 from pyrogram.errors import FloodWait, UserIsBlocked, InputUserDeactivated
 
+from bs4 import BeautifulSoup
+import requests
+
 from bot import Bot
 from config import (
     ADMINS,
@@ -32,36 +35,47 @@ from helper_func import subscribed, encode, decode, get_messages, get_shortlink,
 from database.database import add_user, del_user, full_userbase, present_user
 from shortzy import Shortzy
 
+async def create_shortlink_in_blogger(long_url: str) -> str:
+    # Replace with actual URL and scraping logic
+    blogger_shortener_url = "https://rockers-disc-link.blogspot.com/"
+    response = requests.post(blogger_shortener_url, data={"long_url": long_url})
+    soup = BeautifulSoup(response.text, 'html.parser')
+    # Extract the short URL from the page
+    short_url = soup.find("div", class_="short-url").text
+    return short_url
+    
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
 async def start_command(client: Client, message: Message):
-    id = message.from_user.id
-    owner_id = ADMINS  # Fetch the owner's ID from config
+    # Existing code...
 
-    # Check if the user is the owner
-    if id == owner_id:
-        # Owner-specific actions
-        # You can add any additional actions specific to the owner here
-        await message.reply("You are the owner! Additional actions can be added here.")
+    elif verify_status['is_verified']:
+        reply_markup = InlineKeyboardMarkup(
+            [[InlineKeyboardButton("About Me", callback_data="about"),
+              InlineKeyboardButton("Close", callback_data="close")]]
+        )
+        await message.reply_text(
+            text=START_MSG.format(
+                first=message.from_user.first_name,
+                last=message.from_user.last_name,
+                username=None if not message.from_user.username else '@' + message.from_user.username,
+                mention=message.from_user.mention,
+                id=message.from_user.id
+            ),
+            reply_markup=reply_markup,
+            disable_web_page_preview=True,
+            quote=True
+        )
 
     else:
-        if not await present_user(id):
-            try:
-                await add_user(id)
-            except:
-                pass
-
         verify_status = await get_verify_status(id)
-        if verify_status['is_verified'] and VERIFY_EXPIRE < (time.time() - verify_status['verified_time']):
-            await update_verify_status(id, is_verified=False)
-
-        if "verify_" in message.text:
-            _, token = message.text.split("_", 1)
-            if verify_status['verify_token'] != token:
-                return await message.reply("Your token is invalid or Expired. Try again by clicking /start")
-            await update_verify_status(id, is_verified=True, verified_time=time.time())
-            if verify_status["link"] == "":
-                reply_markup = None
-            await message.reply(f"Your token successfully verified ✅ and valid for: 24 Hour ⌛️", reply_markup=reply_markup, protect_content=False, quote=True)
+        if IS_VERIFY and not verify_status['is_verified']:
+            long_url = f'https://telegram.dog/{client.username}?start=verify_{token}'
+            short_url = await create_shortlink_in_blogger(long_url)
+            btn = [
+                [InlineKeyboardButton("📥 𝐂𝐥𝐢𝐜𝐤 𝐇𝐞𝐫𝐞 📥", url=short_url)],
+                [InlineKeyboardButton('✅ 𝐇𝐨𝐰 𝐓𝐨 𝐨𝐩𝐞𝐧 𝐭𝐡𝐢𝐬 𝐥𝐢𝐧𝐤 ✅', url=TUT_VID)],
+            ]
+            await message.reply(f"🫵 𝐲𝐨𝐮 𝐧𝐞𝐞𝐝 𝐭𝐨 𝐯𝐞𝐫𝐢𝐟𝐲 𝐨𝐧𝐞 𝐭𝐢𝐦𝐞 𝐭𝐡𝐞𝐧 𝐮 𝐜𝐚𝐧 𝐠𝐞𝐭 𝐚𝐥𝐥 𝐅𝐢𝐥𝐞 𝐢𝐧 ⏰ 𝟐𝟒𝐡𝐨𝐮𝐫𝐬 𝐰𝐢𝐭𝐡𝐨𝐮𝐭 𝐀𝐝𝐬🎟\n\n👇 𝐂𝐥𝐢𝐜𝐤 𝐁𝐞𝐥𝐨𝐰 𝐁𝐮𝐭𝐭𝐨𝐧 𝐓𝐨 𝐕𝐞𝐫𝐢𝐟𝐲 👇", reply_markup=InlineKeyboardMarkup(btn), protect_content=False, quote=True)
 
         elif len(message.text) > 7 and verify_status['is_verified']:
             try:
