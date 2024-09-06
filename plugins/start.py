@@ -148,7 +148,6 @@ async def start_command(client: Client, message: Message):
                 btn = [
                     [InlineKeyboardButton("📥 𝐂𝐥𝐢𝐜𝐤 𝐇𝐞𝐫𝐞 📥", url=link)],
                     [InlineKeyboardButton('✅ 𝐇𝐨𝐰 𝐓𝐨 𝐨𝐩𝐞𝐧 𝐭𝐡𝐢𝐬 𝐥𝐢𝐧𝐤 ✅', url=TUT_VID)],
-                    [InlineKeyboardButton('💳 𝐛𝐮𝐲 𝐯𝐢𝐩 𝐦𝐞𝐦𝐛𝐞𝐫𝐬𝐡𝐢𝐩 𝐭𝐨 𝐠𝐞𝐭 𝐝𝐢𝐫𝐞𝐜𝐭 𝐯𝐢𝐝𝐞𝐨 𝐧𝐨 𝐥𝐢𝐧𝐤 💳', url=f'https://t.me/File_Store_Bot_membership/2')],
                 ]
                 await message.reply(f"🫵 𝐲𝐨𝐮 𝐧𝐞𝐞𝐝 𝐭𝐨 𝐯𝐞𝐫𝐢𝐟𝐲 𝐨𝐧𝐞 𝐭𝐢𝐦𝐞 𝐭𝐡𝐞𝐧 𝐮 𝐜𝐚𝐧 𝐠𝐞𝐭 𝐚𝐥𝐥 𝐅𝐢𝐥𝐞 𝐢𝐧 ⏰ 𝟐𝟒𝐡𝐨𝐮𝐫𝐬 𝐰𝐢𝐭𝐡𝐨𝐮𝐭 𝐀𝐝𝐬🎟\n\n👇 𝐂𝐥𝐢𝐜𝐤 𝐁𝐞𝐥𝐨𝐰 𝐁𝐮𝐭𝐭𝐨𝐧 𝐓𝐨 𝐕𝐞𝐫𝐢𝐟𝐲 👇", reply_markup=InlineKeyboardMarkup(btn), protect_content=False, quote=True)
 
