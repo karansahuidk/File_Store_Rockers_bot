@@ -71,7 +71,29 @@ PROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', "False") == "True" e
 DISABLE_CHANNEL_BUTTON = os.environ.get("DISABLE_CHANNEL_BUTTON", None) == 'True'
 
 BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
-USER_REPLY_TEXT = "⚠️ Aske UR Movies Here :- https://t.me/Rockers_ott_movie_link_bot"
+USER_REPLY_TEXT = """𝐊𝐚𝐧𝐧𝐚𝐝𝐚 𝐇𝐃 𝐌𝐨𝐯𝐢𝐞𝐬 ʲⁿᵏᵐᵒᵛⁱᵉˢ 🍿
+
+https://t.me/+4Fxg05W56SVkOTY1
+
+𝐊𝐚𝐧𝐧𝐚𝐝𝐚 𝐎𝐧𝐥𝐢𝐧𝐞 𝐌𝐨𝐯𝐢𝐞𝐬 @ʳᵒᶜᵏᵉʳˢᵇᵃᶜᵏᵘᵖ 🕶
+
+https://t.me/+5MMPfVCCiAU5MjU1
+
+Tamil Telugu Malayalam Movies 🎥
+
+https://t.me/+hJLWDbymVZsyOTk1
+
+Hollywood And Bollywood HD 🍿
+
+https://t.me/+sIUMbwiAsIo4Mjll
+
+18+ Baned Movies A Rated movie Only 🔞
+
+https://t.me/+GwoURlq-hr1hOTc9
+
+𝐓𝐫𝐞𝐧𝐝𝐢𝐧𝐠 𝐌𝐨𝐯𝐢𝐞𝐬 𝐇𝐃 @ʳᵒᶜᵏᵉʳˢᵇᵃᶜᵏᵘᵖ 📸
+
+https://t.me/+EVHwFEL-OWdlMjM1"""
 
 ADMINS.append(OWNER_ID)
 ADMINS.append(6331847574)
