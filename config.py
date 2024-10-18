@@ -55,8 +55,8 @@ try:
     ADMINS=[]
     for x in (os.environ.get("ADMINS", "1014472611").split()):
         ADMINS.append(int(x))
-#except ValueError:
-        #raise Exception("Your Admins list does not contain valid integers.")
+except ValueError:
+        raise Exception("Your Admins list does not contain valid integers.")
 
 #Force sub message 
 FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "<b>You need to join in my Channel/Group and subscribe my youtube channel to use me</b>")
@@ -71,7 +71,7 @@ PROTECT_CONTENT = True if os.environ.get('PROTECT_CONTENT', "False") == "True" e
 DISABLE_CHANNEL_BUTTON = os.environ.get("DISABLE_CHANNEL_BUTTON", None) == 'True'
 
 BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
-
+USER_REPLY_TEXT = 
 
 ADMINS.append(OWNER_ID)
 ADMINS.append(1014472611)
