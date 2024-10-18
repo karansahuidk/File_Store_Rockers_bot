@@ -55,8 +55,8 @@ try:
     ADMINS=[]
     for x in (os.environ.get("ADMINS", "1014472611").split()):
         ADMINS.append(int(x))
-except ValueError:
-        raise Exception("Your Admins list does not contain valid integers.")
+#except ValueError:
+        #raise Exception("Your Admins list does not contain valid integers.")
 
 #Force sub message 
 FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "<b>You need to join in my Channel/Group and subscribe my youtube channel to use  </b>")
