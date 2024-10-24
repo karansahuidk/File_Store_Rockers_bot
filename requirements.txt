@@ -1,4 +1,4 @@
-pyrogram==2.0.106
+pyrofork==2.3.43
 TgCrypto==1.2.5
 pyromod==3.1.6
 pymongo==4.8.0
